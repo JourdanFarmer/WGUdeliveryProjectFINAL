@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2099fe50-d6c0-4a58-94b6-2ee40863ae38" name="Changes" comment="Initital commit">
+    <list default="true" id="2099fe50-d6c0-4a58-94b6-2ee40863ae38" name="Changes" comment="add data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Truck.py" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.py" afterDir="false" />
     </list>
@@ -75,11 +75,20 @@
       <option name="project" value="LOCAL" />
       <updated>1715975647231</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add data">
+      <option name="closed" value="true" />
+      <created>1715975885165</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715975885165</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initital commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initital commit" />
+    <MESSAGE value="add data" />
+    <option name="LAST_COMMIT_MESSAGE" value="add data" />
   </component>
 </project>

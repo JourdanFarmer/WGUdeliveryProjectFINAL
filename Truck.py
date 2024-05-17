@@ -152,7 +152,6 @@ class Truck:
             else:
                 print("\t" + current_time.strftime("%H:%M:%S") + ": TRUCK" + self.id +
                       " delivering package to: '" + delivery_next[0] + "'")
-            sleep(0.05)
 
             if (current_time >= ten_twenty_am and not package_9_status and self.id == "1 trip2" and not request_to_update_9):
                 print("")
@@ -173,7 +172,6 @@ class Truck:
                         "9", "Third District Juvenile Court", "410 S State St", "EOD", "Salt Lake City", "84111", "2", "in transit"))
                     print(f"\tpackage #9 has been updated to: 410 S State St., Salt Lake City, UT 84111")
                     print("")
-                    sleep(1)
                     package_9_status = True
                 elif answer == "no":
                     package_ingest.package_hash.add("9", Package(
