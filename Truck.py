@@ -153,7 +153,7 @@ class Truck:
                 print("\t" + current_time.strftime("%H:%M:%S") + ": TRUCK" + self.id +
                       " delivering package to: '" + delivery_next[0] + "'")
 
-            if (current_time >= ten_twenty_am and not package_9_status and self.id == "1 trip2" and not request_to_update_9):
+            if (current_time >= ten_twenty_am and not package_9_status and self.id == " 1, TRIP 2" and not request_to_update_9):
                 print("")
                 print(f"\tan update is required for package #9")
                 print(f"\twould you like to make the update? input: 'yes' or 'no'")

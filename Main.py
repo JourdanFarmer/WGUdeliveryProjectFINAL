@@ -100,7 +100,7 @@ initialize_truck1_trip2()
 initialize_truck2()
 
 # track package 9 - the problematic one
-package_9_has_been_updated = False
+package_9_status = False
 
 
 # delivery program init
@@ -113,7 +113,7 @@ def delivery_program(package_status):
     # deliver truck 1
     initialize_truck1()
     truck1_return_data = truck1.deliver_packages(
-        eight_am, package_ingest, package_status, package_9_has_been_updated)
+        eight_am, package_ingest, package_status, package_9_status)
 
     initialize_truck1_trip2()
     truck1_trip2_return_data = truck1_trip2.deliver_packages(
