@@ -10,6 +10,11 @@ import datetime
 import time
 import collections
 
+
+# Complexities of program as a whole:
+# Time: O(n^2)
+# Space: O(n)
+
 # retains package status
 package_status = dict(dict())
 
