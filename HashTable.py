@@ -3,12 +3,16 @@
 class HashTable:
 
     # constructor
+    # time complexity: O(1)
+    # space complexity: O(1)
     def __init__(self):
         self.size = 128
         self.table = [None] * self.size
         self.length = -1
 
     # calculates index within array
+    # time complexity: O(n)
+    # space complexity: O(1)
     def index(self, input):
         raw_hash = 0
         input = str(input)
@@ -17,6 +21,8 @@ class HashTable:
         return raw_hash % self.size
 
     # get function
+    # time complexity: O(n)
+    # space complexity: O(1)
     def get(self, key):
         # calculates hash value
         hash = self.index(key)
@@ -27,6 +33,8 @@ class HashTable:
         return None
 
     # add function
+    # time complexity: O(n)
+    # space complexity: O(1)
     def add(self, key, val):
         hash = self.index(key)
         value = [key, val]
@@ -43,6 +51,8 @@ class HashTable:
                 return True
 
     # delete function
+    # time complexity: O(n)
+    # space complexity: O(1)
     def delete(self, key):
         hash = self.index(key)
 
@@ -56,6 +66,8 @@ class HashTable:
                 return True
 
     # print function
+    # time complexity: O(n)
+    # space complexity: O(1)
     def print(self, key):
         hash = self.index(key)
         for i in range(0, len(self.table[hash])):

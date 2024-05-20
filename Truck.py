@@ -11,7 +11,8 @@ import copy
 class Truck:
 
     # constructor
-    # complexity: O(1)
+    # time complexity: O(1)
+    # space complexity: O(1)
     def __init__(self, id):
         self.speed = 18
         self.id = id
@@ -21,24 +22,28 @@ class Truck:
         self.package_count = 0
 
     # truck and package count string
-    # complexity: O(1)
+    # time complexity: O(1)
+    # space complexity: O(1)
     def __str__(self):
         return f"truck{self.id} has {self.package_count} packages remaining."
 
     # package getter
-    # complexity: O(1)
+    # time complexity: O(1)
+    # space complexity: O(1)
     def get_packages(self):
         return self.packages
 
     # add package function
-    # complexity: O(1)
+    # time complexity: O(1)
+    # space complexity: O(1)
     def add_package(self, package):
         self.packages.add(package.id, package)
         self.package_count += 1
         self.delivery_nodes.add(package.address_name)
 
     # remove package function
-    # complexity: O(1)
+    # time complexity: O(1)
+    # space complexity: O(1)
     def remove_package(self, package):
         self.packages.remove(package)
         self.package_count -= 1
@@ -46,8 +51,8 @@ class Truck:
 
     # nearest neighbor algorithm used to build an optimal delivery route
     # starts from home base (WGU) and then delivers to the next closest location. After final delivery, returns home.
-    # time complexity: O(N^2)
-    # space complexity: O(N)
+    # time complexity: O(n^2)
+    # space complexity: O(n)
     def make_route(self, node_list):
         current_node = "Western Governors University"
         self.route = Queue()
@@ -80,7 +85,8 @@ class Truck:
         return(total_distance)
 
     # returns packages currently being delivered to target location
-    # complexity: O(N)
+    # time complexity: O(n)
+    # space complexity: O(k)
     def get_packages_being_delivered(self, delivery_location_name):
         packages_current = list()
         # 40 total packages to check
@@ -92,7 +98,8 @@ class Truck:
         return packages_current
 
     # returns packages headed got target location.
-    # complexity: O(N)
+    # time complexity: O(n)
+    # space complexity: O(k)
     def get_packages_on_board(self):
         all_packages = list()
         for i in range(1, 41):
@@ -102,7 +109,8 @@ class Truck:
         return all_packages
 
     # delivery function
-    # complexity: O(N)
+    # time complexity: O(n)
+    # space complexity: O(n)
     def deliver_packages(self, truck_departure_time, package_ingest, package_status, package_9_status):
         return_time = None
         travel_distance = 0
