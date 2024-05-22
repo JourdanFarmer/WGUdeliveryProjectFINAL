@@ -10,6 +10,11 @@ import datetime
 import time
 import collections
 
+
+# Complexities of program as a whole:
+# Time: O(n^2)
+# Space: O(n)
+
 # retains package status
 package_status = dict(dict())
 
@@ -21,7 +26,8 @@ package_ingest = PackageIngest()
 
 
 # load truck 1 and calculate route
-# complexity: O(n)
+# time complexity: O(n)
+# space complexity: O(n)
 def initialize_truck1():
     truck1.delivery_nodes.clear()
     truck1.add_package(package_ingest.get_package_by_id('1'))
@@ -43,7 +49,8 @@ def initialize_truck1():
 
 
 # load truck 1, trip 2 and calculate route
-# complexity: O(n)
+# time complexity: O(n)
+# space complexity: O(n)
 def initialize_truck1_trip2():
     truck1_trip2.delivery_nodes.clear()
     truck1_trip2.add_package(package_ingest.get_package_by_id('6'))
@@ -62,7 +69,8 @@ def initialize_truck1_trip2():
 
 
 # load truck 2 and calculate route
-# complexity: O(n)
+# time complexity: O(n)
+# space complexity: O(1)
 def initialize_truck2():
     truck2.delivery_nodes.clear()
     truck2.add_package(package_ingest.get_package_by_id('17'))
@@ -83,7 +91,8 @@ def initialize_truck2():
 
 
 # initialize_graph
-# complexity: O(n^2)
+# time complexity: O(n^2)
+# space complexity: O(1)
 def initialize_graph():
     g.initialize_location_name()
     g.initialize_location_distance()
@@ -104,7 +113,8 @@ package_9_status = False
 
 
 # delivery program init
-# complexity: O(n)
+# time complexity: O(n)
+# space complexity: O(1)
 def delivery_program(package_status):
     eight_am = datetime.datetime(2021, 7, 1, 8, 0, 0, 0)
     nine_oh_five = datetime.datetime(2021, 7, 1, 9, 5, 0, 0)
@@ -173,7 +183,8 @@ def delivery_program(package_status):
 
     package_status = list()
 
-# complexity: O(n)
+# time complexity: O(n)
+# space complexity: O(n)
 user_input = ""
 while (user_input != "begin"):
     print("")

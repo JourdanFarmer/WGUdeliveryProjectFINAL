@@ -7,7 +7,8 @@ from HashTable import HashTable
 class PackageIngest:
 
     # constructor
-    # complexity: O(1)
+    # time complexity: O(1)
+    # space complexity: O(1)
     def __init__(self):
         self.total_packages = 40
         self.packages = {}
@@ -15,22 +16,26 @@ class PackageIngest:
         self.csv_to_package_table()
 
     # returns package count
-    # complexity: O(1)
+    # time complexity: O(1)
+    # space complexity: O(1)
     def __len__(self):
         return len(self.packages)
 
     # returns iterator object
-    # complexity: O(1)
+    # time complexity: O(1)
+    # space complexity: O(1)
     def __iter__(self):
         return iter([package for id, package in self.packages.items()])
 
     # insert function
-    # complexity: O(1)
+    # time complexity: O(1)
+    # space complexity: O(1)
     def insert(self, item):
         self.packages[item.id] = item
 
     # makes hashtable based on distance_names.csv and packages.csv
-    # complexity: O(n)
+    # time complexity: O(n)
+    # space complexity: O(n)
     def csv_to_package_table(self):
         location_address_to_names = HashTable()
 
@@ -53,13 +58,15 @@ class PackageIngest:
 
     # everything under are get functions per each variable
 
-    # complexity: O(1)
     # get package by ID
+    # time complexity: O(1)
+    # space complexity: O(1)
     def get_package_by_id(self, id):
         return self.package_hash.get(id)
 
-    # complexity: O(n)
     # get package by address
+    # time complexity: O(n)
+    # space complexity: O(k)
     def get_package_by_address(self, address):
         packages = list()
         for id in range(1, self.total_packages + 1):
@@ -68,8 +75,9 @@ class PackageIngest:
                 packages.append(package)
         return packages
 
-    # complexity: O(n)
     # get package by city
+    # time complexity: O(n)
+    # space complexity: O(k)
     def get_package_by_city(self, city):
         packages = list()
         for id in range(1, self.total_packages + 1):
@@ -78,8 +86,9 @@ class PackageIngest:
                 packages.append(package)
         return packages
 
-    # complexity: O(n)
     # get package by deadline
+    # time complexity: O(n)
+    # space complexity: O(k)
     def get_package_by_deadline(self, deadline):
         packages = list()
         for id in range(1, self.total_packages + 1):
@@ -88,8 +97,9 @@ class PackageIngest:
                 packages.append(package)
         return packages
 
-    # complexity: O(n)
     # get package by zip
+    # time complexity: O(n)
+    # space complexity: O(k)
     def get_package_by_zip(self, zip):
         packages = list()
         for id in range(1, self.total_packages + 1):
@@ -98,8 +108,9 @@ class PackageIngest:
                 packages.append(package)
         return packages
 
-    # complexity: O(n)
     # get package by weight
+    # time complexity: O(n)
+    # space complexity: O(k)
     def get_package_by_weight(self, weight):
         packages = list()
         for id in range(1, self.total_packages + 1):
@@ -108,8 +119,9 @@ class PackageIngest:
                 packages.append(package)
         return packages
 
-    # complexity: O(n)
     # get package by status
+    # time complexity: O(n)
+    # space complexity: O(k)
     def get_package_by_status(self, status):
         packages = list()
         for id in range(1, self.total_packages + 1):
