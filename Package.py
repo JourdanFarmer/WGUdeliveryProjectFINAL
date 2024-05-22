@@ -44,3 +44,15 @@ class Package:
         self.delivery_city = new_city
         self.delivery_zip = new_zip
         self.status = new_status
+
+class DeliverySystem:
+    def truck_id(self, package_id):
+        self.id = package_id
+
+        truck_1 = [1, 29, 7, 30, 8, 34, 40, 13, 39, 14, 15, 16, 19, 20, 37, 6, 5, 21, 4, 24, 23, 26, 22, 10, 11, 31]
+        truck_2 = [17, 12, 25, 28, 32, 3, 18, 36, 38, 27, 35, 2, 33, 9]
+
+        if self.id in truck_1:
+            return "1"
+        if self.id in truck_2:
+            return "2"

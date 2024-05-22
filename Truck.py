@@ -32,11 +32,11 @@ class Truck:
 
     # add package function
     # complexity: O(1)
-    def add_package(self, package, truck):
+    def add_package(self, package, truck_id):
         self.packages.add(package.id, package)
         self.package_count += 1
         self.delivery_nodes.add(package.address_name)
-        self.truck = 1
+        self.truck_id = 1
 
     # remove package function
     # complexity: O(1)
@@ -242,4 +242,4 @@ class Truck:
 
         return_time = truck_departure_time + timedelta(hours=drive_time)
 
-        return[return_time, drive_time, travel_distance, package_9_status]
+        return[return_time, drive_time, travel_distance, package_9_status, id]
