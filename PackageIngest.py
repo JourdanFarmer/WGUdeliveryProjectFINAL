@@ -47,9 +47,9 @@ class PackageIngest:
         for entry in package_csv:
             if len(entry) > 1:
                 self.insert(Package(id=entry[0], address_name=location_address_to_names.get(entry[1]), delivery_address=entry[1], deadline=entry[5],
-                                    delivery_city=entry[2], delivery_zip=entry[4], weight=entry[6], status="AT THE HUB"))
+                                    delivery_city=entry[2], delivery_zip=entry[4], weight=entry[6], status="package facility"))
                 self.package_hash.add(entry[0], Package(id=entry[0], address_name=location_address_to_names.get(entry[1]), delivery_address=entry[1], deadline=entry[5],
-                                                               delivery_city=entry[2], delivery_zip=entry[4], weight=entry[6], status="AT THE HUB"))
+                                                               delivery_city=entry[2], delivery_zip=entry[4], weight=entry[6], status="package facility"))
 
     # everything under are get functions per each variable
 

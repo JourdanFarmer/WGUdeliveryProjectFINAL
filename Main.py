@@ -285,10 +285,10 @@ while (user_input != "begin"):
                         # Output all items status
                         for key in sorted_packages:
                             if ("delivered" in str(sorted_packages[key])):
-                                print("\t"+str(sorted_packages[key]))
+                                print("\t"+str(sorted_packages[key]) + "  : delivered by Truck 1")
                             elif ("in progress" in str(sorted_packages[key])):
                                 print("\t"+str(sorted_packages[key]))
-                            elif ("packing facility" in str(sorted_packages[key])):
+                            elif ("package facility" in str(sorted_packages[key])):
                                 print("\t"+str(sorted_packages[key]))
 
                         user_input = "back"

@@ -6,7 +6,7 @@ class Package:
 
     # constructor
     # complexity: O(1)
-    def __init__(self, id, address_name, delivery_address, deadline, delivery_city, delivery_zip, weight, status):
+    def __init__(self, id, address_name, delivery_address, deadline, delivery_city, delivery_zip, weight, status, truck):
         self.id = id
         self.address_name = address_name
         self.delivery_address = delivery_address
@@ -15,6 +15,7 @@ class Package:
         self.delivery_zip = delivery_zip
         self.weight = weight
         self.status = status
+        self.truck = truck
 
     # retains status of package
     # complexity: O(1)
