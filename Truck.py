@@ -32,11 +32,10 @@ class Truck:
 
     # add package function
     # complexity: O(1)
-    def add_package(self, package, truck_id):
+    def add_package(self, package):
         self.packages.add(package.id, package)
         self.package_count += 1
         self.delivery_nodes.add(package.address_name)
-        self.truck_id = 1
 
     # remove package function
     # complexity: O(1)
